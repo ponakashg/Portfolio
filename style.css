@@ -1,0 +1,145 @@
+html {
+  scroll-behavior: smooth;
+}
+#navbar {
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  padding: 10px 0; /* creates height */
+  z-index: 1000; /* stays above other items */
+  /* background: linear-gradient(135deg, #74abe2, #5563de); */
+}
+
+.nav-link {
+  color: black;
+  font-weight: 500;
+}
+.nav-link:hover {
+  color: rgb(0, 57, 246);
+  /* transform: translateY(-5px); */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 100px;
+}
+
+body {
+  background: linear-gradient(135deg, #74abe2, #5563de);
+}
+/* Buttons */
+
+.btn {
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  font-size: larger;
+  transition: all 0.4s ease;
+  border-radius: 15px;
+  background: black;
+  color: white;
+}
+
+#p {
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  font-size: larger;
+  transition: all 0.4s ease;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  margin-top: 300px;
+}
+
+/* Hover animation fixed */
+#p:hover,
+#ex:hover,
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+/* about me */
+#ex {
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  font-size: larger;
+  transition: all 0.4s ease;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.2);
+}
+#ex .display-1 {
+  font-weight: bolder;
+}
+#h1 {
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-style: italic;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideUp 2s ease-in forwards;
+
+  /* background: linear-gradient(135deg, #7fe0f4, #5565de); */
+}
+.project-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  font-size: larger;
+  transition: all 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  /* background: linear-gradient(135deg, #93e586, #1be9f4); */
+}
+
+h2 {
+  text-align: center;
+}
+
+/* Images */
+.profile-section {
+  margin-top: 150px;
+}
+
+.profile-img {
+  width: 250px;
+  height: 200px;
+  border-radius: 50px 0px 50px 0px;
+  object-fit: cover;
+  /* border: 4px solid #fff;  */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.profile-img:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+  animation: glowBorder 5s infinite alternate;
+}
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes glowBorder {
+  from {
+    box-shadow: 0 0 5px #00f, 0 0 30px #00f, 0 0 45px #00f;
+    border-color: rgb(255, 42, 0);
+  }
+  to {
+    box-shadow: 0 0 5px #0ff, 0 0 30px #0ff, 0 0 45px #0ff;
+    border-color: rgb(115, 246, 7);
+  }
+}
+/* Experience */
+
+#tool {
+  width: 100%;
+  justify-content: end;
+  align-items: end;
+}
+#about,
+#ex,
+#projects {
+  scroll-margin-top: 80px; /* Adjust based on navbar height */
+}
+
+/* Skills */
